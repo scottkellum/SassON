@@ -1,1 +1,3 @@
-compass create project-three -l my-framework --using my-framework
+## WIP
+
+SassON, like JSON but for Sass.
