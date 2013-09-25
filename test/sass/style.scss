@@ -1,20 +1,16 @@
 @import "sasson";
 
-// SassON
-//
-// A standard for creating arrays along with tools for querying things in those arrays.
-
 $widget:
   debug on,
   window (
     title "Sample Konfabulator Widget",
-    name main_window,
+    name "main_window",
     width 500px,
     height 500px
   ),
   image ( 
     src "Images/Sun.png",
-    name sun1,
+    name "sun1",
     hOffset 250px,
     vOffset 250px,
     alignment center
@@ -23,12 +19,15 @@ $widget:
     data "Click Here",
     size 36px,
     style bold,
-    name text1,
+    name "text1",
     hOffset 250px,
     vOffset 100px,
     alignment center,
     hover (
-      opacity (90/100)
+      opacity (80/100),
+      border-bottom 1px
     )
   )
 ;
+
+@debug sasson($widget, text hover opacity);

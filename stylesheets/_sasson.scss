@@ -1,0 +1,14 @@
+@function sasson-find($list, $item) {
+	@for $i from 1 through length($list) {
+		@if nth(nth($list, $i), 1) == $item {
+			@return nth(nth($list, $i), 2);
+		}
+	}
+}
+
+@function sasson($array, $location) {
+	@each $item in $location {
+		$array: sasson-find($array, $item);
+	}
+	@return $array;
+}
